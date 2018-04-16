@@ -1,0 +1,11 @@
+version: "2"
+services:
+  # nginx
+  nginx-python-uwsgi:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app/:/var/www/html/app/
+    environment:
+      TZ: "Asia/Tokyo"
